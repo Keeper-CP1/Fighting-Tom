@@ -1,13 +1,17 @@
 # I.K.E.M.E.N PLUS ULTRA (I.K.E.M.E.N SSZ)
-*Ikemen Plus Ultra* is an update version of the **(CLASSIC/OLD) I.K.E.M.E.N PLUS** uploaded by ***acdgames***. This engine was made by ***Suehiro*** under **S-SIZE** language, improved by ***acdgames*** and currently reworked by ***CD2*** and ***Strong FS***. (If you are looking for the latest Ikemen Engine, is called Ikemen GO).
+*Ikemen Plus Ultra* is an updated version of the **I.K.E.M.E.N PLUS** version uploaded by ***acdgames***. It's an open source fighting game engine that supports **M.U.G.E.N** resources. This engine was made by ***Suehiro*** under **S-SIZE** language, improved by ***acdgames*** and currently reworked by ***CD2*** and ***Strong FS***.
 
-- Consider this version of Ikemen engine an **alternative** in case Ikemen GO doesn't work for you.
+- This engine can be used to create advanced MUGENS or Fighting Games, which can be run on any PC from 2008 onwards, without a graphics card (Runs under DirectX Render).
 
-- This engine can be used to **create advanced MUGENS** or **Fighting Games**, which can be run on potato PC, without a graphics card (Runs under DirectX Render).
+- According to the words of one of the special contributors to this engine ***PlasmoidThunder***: "The benefits that S-SIZE (Ikemen Plus) has over Ikemen GO are":
+  - "Better sound engine for the most part".
+  - "Native system renderer".
+  - "Winamp plugin support".
+  - "Easier to tweak engine code".
 
-- The current version is a public development release for testing purposes, may contain bugs and incomplete features that we hope will be finished in the final release.
+- The current version is a public development release for testing purposes, may contain bugs and incomplete features that will be finished in the final release.
 
-- Help and cooperation are appreciated.
+- Your help and cooperation are appreciated.
 
 ## Minimum System Requirements
 - **System:** Windows XP SP3 - 32 Bits (Yeah it works in WinXP)
@@ -16,14 +20,16 @@
 - **Graphics:** Intel(R) Graphics Media Accelerator 3150 - 256MB
 - **OpenGL:** Is not need, runs with DirectX 11
 
+## Engine Preview
+https://www.youtube.com/watch?v=j2VIMyAp624
+
+[![Alt text](https://i.ytimg.com/vi/pPL9SF8ZjZQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=j2VIMyAp624)
+
 ## Download
 Lastest Version Here: https://github.com/CableDorado2/Ikemen-Plus-Ultra/releases
-![IKMP](https://github.com/CableDorado2/Ikemen-Plus-Ultra/assets/18058378/7bd87695-cab6-4270-a255-8a9475e8c400)
 
 ## Table of Contents
 
->[Meaning of All IKEMEN Versions](#meaning-of-all-ikemen-Versions)
->
 >[Default Controls](#default-controls)
 >
 >[TODO List](#todo-list)
@@ -38,24 +44,13 @@ Lastest Version Here: https://github.com/CableDorado2/Ikemen-Plus-Ultra/releases
 >
 >[Discord Support](#discord-support)
 >
+>[Ikemen Plus Ultra VS Ikemen Go](#ikemen-plus-ultra-vs-ikemen-go)
+>
 >[References](#references)
 >
 >[License](#license)
-
-## Meaning of All IKEMEN Versions
-**IKEMEN** (retroactively referred to as S-SIZE IKEMEN or Vanilla). Is the First version of the engine.
-
-**IKEMEN Plus** is an unofficial update of the Vanilla version. Is for people who want to mess with the engine beyond modification of Lua files.
-It's a quick option to test changes and uses his own S-SIZE (SSZ programing language) which is similar to the C language.
-
-**IKEMEN Plus Ultra** is an unofficial modify/update of the previous version using the same programing language (S-SIZE and Lua) with new features
-inspired from Ikemen Go and Commercial Fighting Games.
-
-**IKEMEN GO** is the official latest version of the engine. The original creator (SUEHIRO) abandoned Vanilla in favour of rewriting the engine in 
-Google's Go language (hence the name). This version is for people who want their game to follow what MUGEN does but with extra features/fixes. 
-Modifying the engine code is beyond most people due to the specific build environment and necessity to compile changes to an executable each time.
-
-**IKEMEN GO Plus** is to GO what IKEMEN Plus was to Vanilla, but over time GO Plus and GO merged into the same thing.
+>
+>[Projects Powered By Ikemen Plus Ultra](#projects-powered-by-ikemen-plus-ultra)
 
 ## Default Controls
 | Action | Keyboard P1 | Keyboard P2 | Gamepad *(Supported from v1.2 onwards)* |
@@ -76,22 +71,43 @@ Modifying the engine code is beyond most people due to the specific build enviro
 | UI Back | Esc |  |  |
 
 ## TODO List
-CD2: Plans for future updates, they are in Spanish, because this is how I understand my ideas (If you can translate them, understand and offer help, will be great for progressing with this engine!):
+CD2: Plans for future updates, they are in Spanish, porque así es como entiendo mis ideas (Si las puedes traducir, entender y ofrecer ayuda estupendo!):
 
 **v1.3**
 ------------
 
+- [ ] La pantalla Demo después del title screen, se debe poder saltar con cualquier tecla antes asignada para jugar (Agregar texto "Demo Mode" en la esquina superior derecha).
+
 - [ ] Al jugar como single contra la CPU, si tiene a más de 1 miembro en su equipo, el p1cmd debe tener control para elegir contra qué miembro luchar primero en order select screen.
 
-- [ ] El jefe final o algún char que tenga un parametro aparezca en modo single tal como funcionan los bonus games, dado que la cpu en modo simul mostrará 2, 3 o 4 jefes finales y es mejor controlar eso bajo un parametro.
+- [ ] Mejorar lógica del desplazamiento para menú de Misiones y Eventos (Al agregar más del límite de pantalla, entonces automáticamente sube como el menú sound test)
+
+- [ ] Agregar modo de juego Co-Op (1P & 2P) Vs CPU en: Versus, Quick match y Training.
 
 - [ ] El sprite/Portrait del char en Single Boss Fight, debe aparecer inmediatamente en character select como ocurre en Co-Op Mode.
 
-- [ ] Mejorar lógica del menú de estadísticas.
+- [ ] Corregir en función "backMenu" que al volver al char select desde el Arcade Mode, no recuerda contra quién vas a luchar y salta este error:
+![Alt text](https://i.postimg.cc/HnYTSL0f/back-Menu-Arcade-Error.png)
+
+- [ ] Asignar en Stage Select: Música original, random o alguna de las que se tienen guardadas en la carpeta sounds.
+
+- [ ] Definir stages desde el main menu con parametro: data.stage = {t_stageDef['stagename']} tal como funciona el: data.p1Char = {t_charAdd['charname']}
+
+- [ ] Mejorar lógica del menú de estadísticas
+
+- [ ] Arreglar para options.lua que un username escrito con espacios, se pueda editar a uno sin espacios. Ejemplo: Si registro "Strong FS", cuando quiera editarlo y registrar "CD2", me debe dejar guardar este último (Actualmente no lo guarda y se mantiene en el ssz "Strong FS").
+
+- [ ] Asignar los offsetRows desde las opciones de Screenpack (Puede ser un data.offsetrows y que esa variable almacene el número). Por cada nuevo offsetRows que se agregue, Ikemen debe escribir automaticamente en el select.def un randomselect.
+
+- [ ] Opción de Rematch en Winner Screen (YES = Luchar con los mismos personajes --- NO = Here comes a New Challenger/Volver a Char Select).
+
+- [ ] Al seleccionar un replay, abrir una ventana que permita: [Ver --- Regresar --- Borrar].
 
 - [ ] Agregar un snd y sprite al obtener perfect, first attack, etc. (fight.ssz).
 
-- [ ] Definir stages desde el main menu con parametro: data.stage = {t_stageDef['stagename']} tal como funciona el: data.p1Char = {t_charAdd['charname']}
+- [ ] Ranking al completar o perder en Modo Arcade.
+
+- [ ] Time Trials Mode.
 
 - [ ] Capturar pantalla en cualquier momento con tecla "Impr Pant" y guardar la screenshot en directorio: "saved/screenshots/NombreDeVentana000.png".
 
@@ -99,19 +115,7 @@ CD2: Plans for future updates, they are in Spanish, because this is how I unders
 
 - [ ] Cargar archivos de video.
 
-- [ ] La pantalla Demo después del title screen, se debe poder saltar con cualquier tecla antes asignada para jugar (Agregar texto "Demo Mode" en la esquina superior derecha).
-
-**v1.3.1**
-------------
-
-- [ ] Las animaciones de cuando los chars son elegidos en char select, se deben reiniciar cada que vuelvas al char select.
-
-- [ ] Cargar la preview de los stages desde el propio sff de la stage.
-
-- [ ] Cargar las animaciones de sprites para el character select desde el propio sff de los chars.
-
 - [ ] Agregar soporte para reconocer a un 2do Gamepad.
-
 
 **v1.4**
 ------------
@@ -120,58 +124,49 @@ CD2: Plans for future updates, they are in Spanish, because this is how I unders
 
 - [ ] Tag system como un 4to Team Mode. (Info sobre el tag integrado al ikemen plus original):https://mugenguild.com/forum/topics/ikemen-plus-181972.100.html
 
-- [ ] Pause Menu/Screen que contenga:
-Continuar/Reanudar
-Lista de Movimientos
-Configuración del Training (Solo se mostrará cuando estés jugando el Training Mode)
-Opciones (Dentro podrás acceder a las opciones de sonido y opciones de controles)
-Ocultar Menú (Ideal para tomar screenshots like BlazBlue)
-Salir (En Story Mode debe salir una opción para guardar el progreso o salir sin guardar)
+- [ ] Pause Menu/Screen.
 
 - [ ] Tower Mode: https://youtu.be/GAoGLx411Sk?t=3
-[![Alt text](https://cdn.videogamesblogger.com/wp-content/uploads/2011/05/mortal-kombat-2011-tower-challenge-guide-screenshot.jpg)](https://youtu.be/GAoGLx411Sk?t=3)
 
 - [ ] Story Mode Concept.
 
 - [ ] Sistema de guardado para el modo historia. Ejemplo: estas en el stage 6 y deseas salir, al presionar esc o abrir el menú de pausa, debe haber una opción entre las últimas que diga: “Salir sin guardar” y otra “GUARDAR Y SALIR”, al presionar guardar y salir, Ikemen debe guardar el progreso hasta la stage 6 y cuando vuelvas a elegir el modo historia pregunte si deseas comenzar una nueva partida (Empezaría desde stage 1) o si quieres continuar donde lo dejaste y use el stage 6 como el punto de partida. En otras palabras es como si en lugar de empezar con personajes de order 1 empiece con los de order 6, saltándose los 5 anteriores niveles.
+
+- [ ] El tiempo para los eventos, debe sincronizarse con un servidor de internet, de lo contrario bloquear los eventos.
 
 **v1.5**
 ------------
 
 - [ ] Sistema de puntos basado en el Add004.
 
-- [ ] Ranking al completar o perder en Modo Arcade.
-
-![Rank Results](https://github.com/CableDorado2/Ikemen-Plus-Ultra/assets/18058378/05f3306c-ab76-4de1-8935-679b83612df1)
-
 - [ ] Leer archivos movelist.dat dentro de los chars.
 
 - [ ] Mejorar el Training Mode con más parametros para el Dummy.
 
-- [ ] Traducir errores en ssz
-
-- [ ] Tournament Mode: https://youtu.be/pjYavslQ0tE?t=3
-[![Alt text](https://i.postimg.cc/c4MHqfxv/1560.jpg)](https://youtu.be/pjYavslQ0tE?t=3)
-
 **v1.6**
 ------------
 
-- [ ] 3er tipo de visualización de stages estilo “chart” (lógica basada en el char select): https://www.youtube.com/watch?v=FHwlSkCkQ50
-[![Alt text](https://static.wikia.nocookie.net/streetfighter/images/d/d6/SF%C3%97TK_Cosmic_Elevator_select.jpg/revision/latest?cb=20150201185002&path-prefix=es)](https://youtu.be/FHwlSkCkQ50)
+- [ ] 3er tipo de visualización de stages estilo “chart” (lógica basada en el char select).
+![Alt text](https://i.postimg.cc/C52PtPTb/Stages-en-Casillas.png)
 
 - [ ] Notificación al desbloquear logros durante el match + Pantalla de Logros.
-![Logros](https://github.com/CableDorado2/Ikemen-Plus-Ultra/assets/18058378/0d62fef2-a96c-4197-b1cb-cc39e72a23a5)
+![Alt text](https://i.postimg.cc/L8LLKCF2/Logros.jpg)
 
-- [ ] Legion Mode: https://youtu.be/k1VH6Bv0sas?t=24
-[![Alt text](https://m.media-amazon.com/images/I/61bjcbXa+SL.jpg)](https://youtu.be/k1VH6Bv0sas?t=24)
+- [ ] Tournament Mode: https://youtu.be/pjYavslQ0tE?t=3
+
+- [ ] Perfiles de usuarios.
 
 **v1.7**
 ------------
 
 - [ ] AttachedChars en Stages: https://youtu.be/90D57uQIGiY?t=8
 
-- [ ] Adventure Mode, combinando elementos del Abyss Mode: https://youtu.be/5UI_nFAORnE?t=281
-[![Alt text](https://i.postimg.cc/SRqT8xK0/Adventure-Mode-Concept.png)](https://youtu.be/y82f2VexwHc?t=11596)
+- [ ] Cargar sprite de chars, para el char select directamente desde su archivo sff; eliminando por completo el uso de herramientas externas como sprmake2.exe.
+
+- [ ] Selección de paletas en char select.
+
+- [ ] Adventure Mode (Background Made by): https://www.pinterest.de/pin/459789443207079748/
+![Alt text](https://i.postimg.cc/SRqT8xK0/Adventure-Mode-Concept.png)
 
 **v1.8**
 ------------
@@ -180,8 +175,6 @@ Salir (En Story Mode debe salir una opción para guardar el progreso o salir sin
 
 - [ ] Mejorar Rendimiento del engine, actualizando el SDL2.dll.
 
-- [ ] Soporte para imágenes RGB/32bits y shaders
-
 - [ ] Integrar una librería que permita capturar videos en formato .avi como los emuladores y estos se guardarán para ser observados en "local replays".
 
 **v1.9**
@@ -189,13 +182,11 @@ Salir (En Story Mode debe salir una opción para guardar el progreso o salir sin
 
 - [ ] Jugar hasta un máximo de 4 jugadores en multiplayer local y online.
 
-- [ ] Hacer realidad las funciones del menú Netplay Settings.
+- [ ] Incorporar un Looby al Modo Online.
 
 - [ ] En sala de espera para Host del online, incluir una opción de acceder al training y esperar mientras juegas.
 
-- [ ] El tiempo para los eventos, debe sincronizarse con un servidor de internet, de lo contrario bloquear los eventos.
-
-- [ ] Perfiles de usuarios.
+- [ ] Modo espectador para el online.
 
 ---------------------
 v2.0 (Final Release)
@@ -207,7 +198,7 @@ v2.0 (Final Release)
 
 - [ ] Traducir los textos de menús a Español y Japonés, para habilitar la carga de scripts de acuerdo al idioma en las opciones de Screenpack.
 
-- [ ] Portear el Engine a Linux, MacOS, Android y iOS.
+- [ ] Portear el Engine a Linux, MacOS y Android.
 
 ## Tutorials
 *Coming Soon!*
@@ -229,12 +220,20 @@ Here you can find some tools that help you in development of your projects (Some
 - Radmin VPN (For Online Netplay): https://www.radmin-vpn.com/
 
 ## Engine Manual
-S-SIZE is the programing core language used. It documentation is here: https://github.com/CableDorado2/Ikemen-Plus-Ultra/wiki
+S-SIZE is the programing core language used. It documentation, is still under development...
 - To understand or modify the .lua scripts, you will need knowledge of the LUA programming language. There you have the official Lua Manual: https://www.lua.org/manual/5.2/
 - For create characters and stages, there you have the official MUGEN Elecbyte Documentation here: http://www.elecbyte.com/mugendocs-11b1/mugen.html
 
 ## Discord Support
-If you need help, you can find support from developers and contributors for this engine in the official Ikemen Discord Server (**They normally answer questions about Ikemen GO**, so if you are going to ask about something for Ikemen Plus Ultra, **keep in mind that those who use this version can be counted on the fingers of the hands**): https://discord.gg/KV5EPnMuA7
+If you need help, you can find support from developers and contributors for this engine in the official Ikemen Discord Server: https://discord.gg/KV5EPnMuA7
+
+## Ikemen Plus Ultra VS Ikemen Go
+To understand this, once again the special contributor ***PlasmoidThunder*** says:
+
+"**IKEMEN SSZ** (Currently Called: Plus Ultra) is for people who want to mess with the engine beyond modification of Lua files. Literally altering behaviour as they see fit. It's a quick option to test changes".
+
+"**IKEMEN GO** is for people who want their game to follow what MUGEN does but with extra features/fixes. Modifying the engine code is beyond most people due to the 
+specific build environment and necessity to compile changes to an executable each time".
 
 ## References
 >- Original Repository Source Code:
@@ -243,10 +242,19 @@ If you need help, you can find support from developers and contributors for this
 >- Original Ikemen Plus Source Code:
 >https://github.com/acdgames/Ikemen-Plus
 >
->- Lastest Ikemen Engine (Ikemen Go) Source Code:
->https://github.com/ikemen-engine/Ikemen-GO
+>- Current Ikemen Engine (Ikemen Go) Source Code:
+>https://github.com/Windblade-GR01/Ikemen-GO
 
 ## License
 The code is under the MIT Licence.
 Non-code assets are under CC-BY 3.0.
 Check [License.txt](License.txt) for more details.
+
+## Projects Powered By Ikemen Plus Ultra
+>***MUGENGERS 4 - THE OROCHI'S ORIGIN:*** https://www.youtube.com/watch?v=TezLZpIdbac
+>
+>[![Alt text](https://img.youtube.com/vi/TezLZpIdbac/maxresdefault.jpg)](https://www.youtube.com/watch?v=TezLZpIdbac)
+
+>***ULTIMATE SMASHBOX:*** In development...
+>
+>[![Alt text](https://i.ytimg.com/vi/C5VTzhcFa3g/maxresdefault.jpg)](https://www.youtube.com/channel/UCPEISiiXtH494o63xeBu3Xg)
