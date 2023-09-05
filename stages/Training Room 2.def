@@ -1,0 +1,79 @@
+;stage template by Eternaga , Email: Eternaga@hotmail.com
+
+[Info]
+name = "Friendly House"
+
+[BGdef]
+spr = Training Room 2.sff
+debugbg = 0
+
+[Music]
+bgmusic = sound/Friendly House.mp3
+bgvolume = 100
+
+
+[Camera]
+startx = 0
+starty = 0
+boundleft = -150
+boundright = 453
+boundhigh = -350
+boundlow = 0
+verticalfollow = 1
+floortension = 30
+tension = 60
+
+[PlayerInfo]
+p1startx = -70          
+p1starty = 0            
+p1startz = 0            
+p1facing = 1        
+
+p2startx = 70
+p2starty = 0
+p2startz = 0
+p2facing = -1
+
+leftbound  = -1000 
+rightbound =  1000 
+topbound  =  0     
+botbound  =  0     
+
+[Scaling] 
+topz     = 0       
+botz     = 50      
+topscale = 1       
+botscale = 1.2     
+
+[Bound]
+screenleft = 15    
+screenright = 15  
+
+[StageInfo]
+zoffset = 225
+autoturn = 1
+resetBG = 1
+
+[shadow]
+Intensity = 90
+color = 0,0,0
+yscale = .05
+fade.range = -400,-100
+
+[Reflection]
+intensity = 200
+
+;----------------------------------------[PCX IMAGE]
+[BG 0]
+type  = normal
+spriteno = 0, 0
+layerno = 0                
+start = -175, 38
+delta = 0,0
+trans = none
+;---------------------------------------
+[BG Fighting Ground]
+type  = normal
+spriteno = 0,1
+start = -207, 210
+mask = 1
