@@ -19,23 +19,11 @@ There are 2 type of Fighting Tom builds.
 >
 >[TODO List](#todo-list)
 >
->[Tutorials](#tutorials)
->
 >[Resources](#resources)
->
->[Tools](#tools)
->
->[Engine Manual](#engine-manual)
->
->[Discord Support](#discord-support)
->
->[Ikemen Plus Ultra VS Ikemen Go](#ikemen-plus-ultra-vs-ikemen-go)
 >
 >[References](#references)
 >
 >[License](#license)
->
->[Projects Powered By Ikemen Plus Ultra](#projects-powered-by-ikemen-plus-ultra)
 
 ## Default Controls
 | Action | Keyboard P1 | Keyboard P2 | Gamepad *(Supported from v1.2 onwards)* |
