@@ -1,0 +1,33 @@
+[Info]
+name="Tom"
+displayname="Talking Tom"
+versiondate=
+mugenversion=
+author="Angry109"
+pal.defaults=1
+
+[Files]
+sprite=Tom.sff
+sound=Tom.snd
+anim=Tom.air
+cmd=Tom.cmd
+cns=Tom.cns
+st=Tom.cns
+stcommon=common1.cns
+pal1=Talking tom.act
+pal2=Talking tom2.act
+pal3=Talking tom3.act
+pal4=Talking tom4.act
+pal5=Talking tom5.act
+pal6=Talking tom6.act
+pal7=Talking tom7.act
+pal8=Talking tom8.act
+pal9=Talking tom9.act
+pal10=Talking tom10.act
+pal11=Talking tom11.act
+pal12=Talking tom12.act
+
+
+[Arcade]
+intro.storyboard = ..\../data/storyboards/TomIntro.def
+ending.storyboard = ..\../data/storyboards/TomEnding.def
