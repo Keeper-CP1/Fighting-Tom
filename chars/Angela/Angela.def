@@ -1,0 +1,33 @@
+; Definition file for player
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name ="Angela"
+displayname ="Adorable Angela"
+versiondate =
+mugenversion =
+author =""
+pal.defaults =1,2,3
+
+; Files for the player
+[Files]
+cmd     =goomba.cmd
+cns     =goomba.cns
+st      =goomba.cns
+stcommon =common1.cns
+sprite  =goomba.sff
+anim    =goomba.air
+sound  =goomba.snd
+pal1=angela.act
+pal2=ang2.act
+pal3=ang3.act
+pal4=ang4.act
+pal5=ang5.act
+pal6=ang6.act
+pal7=ang7.act
+pal8=ang8.act
+[Arcade]
+intro.storyboard=
+ending.storyboard=
+

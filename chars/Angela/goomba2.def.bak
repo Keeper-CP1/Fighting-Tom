@@ -1,0 +1,25 @@
+; Definition file for player
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name ="Goomba"
+displayname ="Goomba"
+versiondate =
+mugenversion =
+author =""
+pal.defaults =1,2,3
+
+; Files for the player
+[Files]
+cmd     =goomba.cmd
+cns     =goomba.cns
+st      =goomba.cns
+stcommon =common1.cns
+sprite  =goomba.sff
+anim    =goomba.air
+sound  =goomba.snd
+pal1=angela.act
+[Arcade]
+intro.storyboard=
+ending.storyboard=
