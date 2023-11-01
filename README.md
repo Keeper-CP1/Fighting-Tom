@@ -1,4 +1,4 @@
-# FIGHTING TOM!
+# There's no time to talk! It's time for FIGHTING TOM!
 *Fighting Tom* is the first Talking Tom fangame ever! It makes use of **I.K.E.M.E.N PLUS ULTRA**, an updated version of the **I.K.E.M.E.N PLUS** version uploaded by ***acdgames***.
 
 - This game features the Talking Tom characters, in a fierce Street-Fighter esque battle.
