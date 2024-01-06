@@ -310,6 +310,7 @@ stages/Sunday Afternoon.def
 stages/Far Mountains.def
 stages/Sakura.def
 stages/BakedDesert.def
+stages/UrbanStreet.def
 ;---------------------------------------------------------------------
 [Options]
  ;Here you set the maximum number of matches to fight before game ends
